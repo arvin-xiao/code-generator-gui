@@ -1,0 +1,72 @@
+package cn.coderoom.generator.frontend.engine;
+
+
+import cn.coderoom.generator.frontend.engine.base.CodeTemplateEngine;
+import cn.hutool.core.util.StrUtil;
+
+/**
+ *  通用的模板生成引擎
+ * @class SimpleTemplateEngine
+ * @package cn.coderoom.generator.frontend.engine
+ * @author lim
+ * @email coderoom.cn@gmail.com
+ * @date 2019/12/19 10:11
+*/
+public class SimpleTemplateEngine extends CodeTemplateEngine {
+
+    @Override
+    protected void generatePageEditHtml() {
+        String path = StrUtil.format(super.getContextConfig().getProjectPath() + getPageConfig().getPageEditPathTemplate(),
+                super.getContextConfig().getBizEnName(), super.getContextConfig().getBizEnName());
+        generateFile(super.getContextConfig().getTemplatePrefixPath() + "/page_edit.html.btl", path);
+        System.out.println("生成编辑页面成功!");
+    }
+
+    @Override
+    protected void generatePageAddHtml() {
+        String path = StrUtil.format(super.getContextConfig().getProjectPath() + getPageConfig().getPageAddPathTemplate(),
+                super.getContextConfig().getBizEnName(), super.getContextConfig().getBizEnName());
+        generateFile(super.getContextConfig().getTemplatePrefixPath() + "/page_add.html.btl", path);
+        System.out.println("生成添加页面成功!");
+    }
+
+    @Override
+    protected void generatePageInfoJs() {
+        String path = StrUtil.format(super.getContextConfig().getProjectPath() + getPageConfig().getPageInfoJsPathTemplate(),
+                super.getContextConfig().getBizEnName(), super.getContextConfig().getBizEnName());
+        generateFile(super.getContextConfig().getTemplatePrefixPath() + "/page_info.js.btl", path);
+        System.out.println("生成页面详情js成功!");
+    }
+
+    @Override
+    protected void generatePageJs() {
+        String path = StrUtil.format(super.getContextConfig().getProjectPath() + getPageConfig().getPageJsPathTemplate(),
+                super.getContextConfig().getBizEnName(), super.getContextConfig().getBizEnName());
+        generateFile(super.getContextConfig().getTemplatePrefixPath() + "/page.js.btl", path);
+        System.out.println("生成页面js成功!");
+    }
+
+    @Override
+    protected void generatePageHtml() {
+        String path = StrUtil.format(super.getContextConfig().getProjectPath() + getPageConfig().getPagePathTemplate(),
+                super.getContextConfig().getBizEnName(), super.getContextConfig().getBizEnName());
+        generateFile(super.getContextConfig().getTemplatePrefixPath() + "/page.html.btl", path);
+        System.out.println("生成页面成功!");
+    }
+
+    @Override
+    protected void generateController() {
+        String controllerPath = StrUtil.format(super.getContextConfig().getProjectPath() + super.getControllerConfig().getControllerPathTemplate(),
+                StrUtil.upperFirst(super.getContextConfig().getBizEnName()));
+        generateFile(super.getContextConfig().getTemplatePrefixPath() + "/Controller.java.btl", controllerPath);
+        System.out.println("生成控制器成功!");
+    }
+
+    @Override
+    protected void generateSqls() {
+        String path = StrUtil.format(super.getContextConfig().getProjectPath() + super.sqlConfig.getSqlPathTemplate(),
+                StrUtil.upperFirst(super.getContextConfig().getBizEnName()));
+        generateFile(super.getContextConfig().getTemplatePrefixPath() + "/menu_sql.sql.btl", path);
+        System.out.println("生成sql成功!");
+    }
+}
