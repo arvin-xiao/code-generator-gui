@@ -18,7 +18,7 @@ public interface TemplateEngineStrategy {
      * @date 2019/12/23 15:40
      * @return void
     */
-    public void generateFile(String template, String filePath);
+    void generateFile(String template, String filePath);
 
     /** 
      * 执行遍历所有模板生成文件
@@ -26,6 +26,6 @@ public interface TemplateEngineStrategy {
      * @author lim
      * @date 2019/12/23 15:51 
      * @return void
-    */ 
-    public void execute();
+    */
+    void execute();
 }

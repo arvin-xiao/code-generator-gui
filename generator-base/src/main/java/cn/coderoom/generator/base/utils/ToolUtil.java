@@ -180,11 +180,7 @@ public class ToolUtil extends ValidateUtil{
      */
     public static Boolean isWinOs() {
         String os = System.getProperty("os.name");
-        if (os.toLowerCase().startsWith("win")) {
-            return true;
-        } else {
-            return false;
-        }
+        return os.toLowerCase().startsWith("win");
     }
 
     /**

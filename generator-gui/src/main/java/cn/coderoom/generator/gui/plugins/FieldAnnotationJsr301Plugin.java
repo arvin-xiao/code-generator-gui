@@ -44,7 +44,7 @@ public class FieldAnnotationJsr301Plugin extends PluginAdapter {
                                        IntrospectedTable introspectedTable, ModelClassType modelClassType){
 
         String annotationStr = context.getProperty("annotationConfig");
-        List<Map> annotationConfigs = (List<Map>) JSONArray.parseArray(annotationStr,Map.class);
+        List<Map> annotationConfigs = JSONArray.parseArray(annotationStr,Map.class);
 
         Set<FullyQualifiedJavaType> importedTypes = new HashSet<>();
         FullyQualifiedJavaType fullyQualifiedJavaType = null;

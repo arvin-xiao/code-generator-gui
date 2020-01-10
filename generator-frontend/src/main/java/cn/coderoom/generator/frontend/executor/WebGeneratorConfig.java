@@ -50,9 +50,9 @@ public class WebGeneratorConfig extends AbstractGeneratorConfig {
          * 生成策略
          */
         if (genQo.getIgnoreTabelPrefix() != null) {
-            strategyConfig.setTablePrefix(new String[]{genQo.getIgnoreTabelPrefix()});
+            strategyConfig.setTablePrefix(genQo.getIgnoreTabelPrefix());
         }
-        strategyConfig.setInclude(new String[]{genQo.getTableName()});
+        strategyConfig.setInclude(genQo.getTableName());
         strategyConfig.setNaming(NamingStrategy.underline_to_camel);
         packageConfig.setParent(null);
         packageConfig.setEntity(genQo.getProjectPackage() + ".modular.system.model");
