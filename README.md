@@ -1,5 +1,5 @@
 
-code-generator-gui是基于[mybatis generator](http://www.mybatis.org/generator/index.html)开发一款界面工具, 本工具可以使你非常容易及快速生成Mybatis的Java POJO文件及数据库Mapping文件。
+code-generator-gui是基于[mybatis generator](http://www.mybatis.org/generator/index.html)开发一款界面代码生成工具, 本工具可以使你非常容易及快速生成Mybatis的Java文件及数据库Mapping等文件。
 
 ###目标
 提高效率，释放生产力，基础代码质量可控，加快产品开发进程
@@ -32,15 +32,17 @@ javaClientGenerator：配置dao层接口生成器
 
 ### 第三方jar
 ####guava
+####easypoi
+[文档](https://opensource.afterturn.cn/doc/easypoi.html)
 
 ####hutool
 小而全的Java工具类库
-Doc:https://hutool.cn/docs/#/
-API:https://apidoc.gitee.com/loolly/hutool/ 
+[Doc文档](https://hutool.cn/docs/#/)
+[API文档](https://apidoc.gitee.com/loolly/hutool/ )
 
 
 ### 参考文档
-https://mybatis.org/generator/apidocs/org/mybatis/generator/internal/DefaultCommentGenerator.html
+[mybatis generator](https://mybatis.org/generator/apidocs/org/mybatis/generator/internal/DefaultCommentGenerator.html)
 
 
 ### 要求

@@ -3,7 +3,7 @@ package cn.coderoom.generator.base.utils;
 import org.junit.Test;
 
 /** 
- * 
+ * 根据apiExcel文档生成代码
  * @class Excel2CodeUtilTest
  * @package cn.coderoom.generator.base.utils
  * @author lim
