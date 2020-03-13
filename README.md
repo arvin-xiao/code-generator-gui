@@ -17,6 +17,13 @@ code-generator-gui是基于[mybatis generator](http://www.mybatis.org/generator/
 * 目前已经支持Mysql、Mysql8、Oracle、PostgreSQL与SQL Server，暂不对其他非主流数据库提供支持。(MySQL支持的比较好，其他数据库有什么问题可以在issue中反馈)
 
 ### 技术栈
+```
+
+├─ main
+   │  
+   ├─ java
+ 
+ ```
 ####lombok
 
 ####JavaFX

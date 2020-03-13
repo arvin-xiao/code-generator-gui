@@ -15,7 +15,21 @@ public class Excel2CodeUtilTest {
     @Test
     public void generatorCode() throws Exception {
 
-        Excel2CodeUtil.generatorCode("C:\\Users\\Administrator\\Desktop\\cs.xlsx","taxArrivedIncomeInvoiceManage");
+        Excel2CodeUtil.generatorCode("C:\\Users\\zsn\\Desktop\\2code.xlsx","taxArrivedIncomeInvoiceManage");
+
+    }
+
+    @Test
+    public void generatorModelCode() throws Exception {
+
+        Excel2CodeUtil.generatorModelCode("C:\\Users\\zsn\\Desktop\\2code.xlsx","taxArrivedIncomeInvoiceManage");
+
+    }
+
+    @Test
+    public void generatorZjmiecOACode() throws Exception {
+
+        Excel2CodeUtil.generatorZjmiecOACode("C:\\Users\\zsn\\Desktop\\2code.xlsx","taxArrivedIncomeInvoiceManage");
 
     }
 
