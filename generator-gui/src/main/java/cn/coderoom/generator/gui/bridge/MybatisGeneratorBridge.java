@@ -61,6 +61,19 @@ public class MybatisGeneratorBridge {
         this.annotationConfigs = annotationConfigs;
     }
 
+    public void setProgressCallback(ProgressCallback progressCallback) {
+        this.progressCallback = progressCallback;
+    }
+
+    public void setIgnoredColumns(List<IgnoredColumn> ignoredColumns) {
+        this.ignoredColumns = ignoredColumns;
+    }
+
+    public void setColumnOverrides(List<ColumnOverride> columnOverrides) {
+        this.columnOverrides = columnOverrides;
+    }
+
+
     /** 
      * 
      * @param 	
@@ -312,15 +325,4 @@ public class MybatisGeneratorBridge {
 		return sb.toString();
 	}
 
-	public void setProgressCallback(ProgressCallback progressCallback) {
-        this.progressCallback = progressCallback;
-    }
-
-    public void setIgnoredColumns(List<IgnoredColumn> ignoredColumns) {
-        this.ignoredColumns = ignoredColumns;
-    }
-
-    public void setColumnOverrides(List<ColumnOverride> columnOverrides) {
-        this.columnOverrides = columnOverrides;
-    }
 }

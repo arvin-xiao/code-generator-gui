@@ -3,6 +3,7 @@ package cn.coderoom.generator.gui.plugins;
 import cn.coderoom.generator.base.utils.StringUtils;
 import cn.coderoom.generator.gui.enums.JsrAnnotationEnum;
 import cn.coderoom.generator.gui.util.MybatisGeneratorUtil;
+import cn.coderoom.generator.gui.util.ReflectUtil;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import org.mybatis.generator.api.IntrospectedColumn;
@@ -45,7 +46,9 @@ public class FieldAnnotationJsr301Plugin extends PluginAdapter {
 
         String annotationStr = context.getProperty("annotationConfig");
         List<Map> annotationConfigs = JSONArray.parseArray(annotationStr,Map.class);
-
+        if(annotationConfigs==null){
+            annotationConfigs = new ArrayList<>();
+        }
         Set<FullyQualifiedJavaType> importedTypes = new HashSet<>();
         FullyQualifiedJavaType fullyQualifiedJavaType = null;
 

@@ -342,6 +342,9 @@ public class MainUIController extends BaseFXController {
             return;
         }
 
+        /**
+         * 代码生成连接器
+         */
         MybatisGeneratorBridge bridge = new MybatisGeneratorBridge();
         bridge.setGeneratorConfig(generatorConfig);
         bridge.setDatabaseConfig(selectedDatabaseConfig);
@@ -350,6 +353,7 @@ public class MainUIController extends BaseFXController {
         bridge.setAnnotationConfigs(annotationConfigs);
         UIProgressCallback alert = new UIProgressCallback(Alert.AlertType.INFORMATION);
         bridge.setProgressCallback(alert);
+
         alert.show();
         PictureProcessStateController pictureProcessStateController = null;
         try {

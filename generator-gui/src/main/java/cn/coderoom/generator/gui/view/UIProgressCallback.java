@@ -6,7 +6,7 @@ import javafx.scene.control.Alert;
 import org.mybatis.generator.api.ProgressCallback;
 
 /** 
- * 
+ * 进度条回调接口实现
  * @class UIProgressCallback
  * @package cn.coderoom.generator.gui.view
  * @author lim
