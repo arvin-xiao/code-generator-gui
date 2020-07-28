@@ -1,4 +1,4 @@
-package cn.coderoom;
+package cn.coderoom.generator.gui;
 
 import cn.coderoom.generator.base.db.utils.SqliteHelper;
 import cn.coderoom.generator.gui.controller.MainUIController;
