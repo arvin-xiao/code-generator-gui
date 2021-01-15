@@ -1,4 +1,4 @@
-package cn.coderoom;
+package cn.coderoom.generator.gui;
 
 import cn.coderoom.generator.base.db.utils.SqliteHelper;
 import cn.coderoom.generator.gui.controller.MainUIController;
@@ -14,7 +14,7 @@ import java.net.URL;
  * Hello world!
  *
  */
-public class App  extends Application
+public class App extends Application
 {
     @Override
     public void start(Stage primaryStage) throws Exception {

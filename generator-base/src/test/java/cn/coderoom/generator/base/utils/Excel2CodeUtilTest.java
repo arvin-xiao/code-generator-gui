@@ -15,14 +15,20 @@ public class Excel2CodeUtilTest {
     @Test
     public void generatorCode() throws Exception {
 
-        Excel2CodeUtil.generatorCode("C:\\Users\\zsn\\Desktop\\2code.xlsx","taxArrivedIncomeInvoiceManage");
+        Excel2CodeUtil.generatorCode("C:\\Users\\liming\\Desktop\\2code.xlsx","taxArrivedIncomeInvoiceManage");
 
     }
 
     @Test
+    public void generatorTable() throws Exception {
+
+        Excel2CodeUtil.generatorTable("C:\\Users\\liming\\Desktop\\2code.xlsx","taxArrivedIncomeInvoiceManage");
+
+    }
+    @Test
     public void generatorModelCode() throws Exception {
 
-        Excel2CodeUtil.generatorModelCode("C:\\Users\\zsn\\Desktop\\2code.xlsx","taxArrivedIncomeInvoiceManage");
+        Excel2CodeUtil.generatorModelCode("C:\\Users\\liming\\Desktop\\2code.xlsx","taxArrivedIncomeInvoiceManage");
 
     }
 
@@ -30,6 +36,13 @@ public class Excel2CodeUtilTest {
     public void generatorZjmiecOACode() throws Exception {
 
         Excel2CodeUtil.generatorZjmiecOACode("C:\\Users\\zsn\\Desktop\\2code.xlsx","taxArrivedIncomeInvoiceManage");
+
+    }
+
+    @Test
+    public void generatorJpaEntity() {
+
+        Excel2CodeUtil.generatorJpaEntity("C:\\Users\\liming\\Desktop\\2code.xlsx");
 
     }
 

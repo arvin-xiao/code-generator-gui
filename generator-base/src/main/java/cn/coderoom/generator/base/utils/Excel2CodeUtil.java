@@ -1,6 +1,7 @@
 package cn.coderoom.generator.base.utils;
 
 import cn.afterturn.easypoi.excel.entity.ImportParams;
+import cn.coderoom.generator.base.enums.MysqlJDBCTypeEnum;
 import cn.coderoom.generator.base.excel2code.entity.ExcelApi2Code;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -64,6 +65,17 @@ public class Excel2CodeUtil {
 
     }
 
+    public static void generatorTable(String url,String modelName){
+
+        File file = new File(url);
+        List<ExcelApi2Code> excelApi2Codes = EasypoiUtil.importExcel(file, ExcelApi2Code.class,new ImportParams());
+        for (ExcelApi2Code excelApi2Code:
+                excelApi2Codes) {
+            System.out.println("`"+excelApi2Code.getLocalFild().toString()+"` varchar(40) NULL COMMENT '"+excelApi2Code.getDescription()+"',");
+        }
+
+    }
+
     public static void generatorZjmiecOACode(String url,String modelName){
 
         File file = new File(url);
@@ -87,5 +99,24 @@ public class Excel2CodeUtil {
         }
 
     }
+
+    public static void generatorJpaEntity(String url){
+
+        File file = new File(url);
+        List<ExcelApi2Code> excelApi2Codes = EasypoiUtil.importExcel(file, ExcelApi2Code.class,new ImportParams());
+        for (ExcelApi2Code excelApi2Code:
+                excelApi2Codes) {
+            if(excelApi2Code.getDescription()!=null){
+                System.out.println("@ApiModelProperty(value = \""+excelApi2Code.getDescription()+"\")");
+            }
+            if(excelApi2Code.getLocalFild().contains("_")){
+                System.out.println("@Column(name = \""+excelApi2Code.getLocalFild()+"\")");
+            }
+            System.out.println("private "+ MysqlJDBCTypeEnum.valueOf(excelApi2Code.getFieldType(),"")+" "+StringUtils.toCamelStyle(excelApi2Code.getLocalFild())+";");
+            System.out.println("");
+        }
+
+    }
+
 
 }
