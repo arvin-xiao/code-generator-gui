@@ -158,7 +158,7 @@
             <!-- mac打包开启-->
             <icon>${project.basedir}/package/macosx/mybatis-generator-gui.icns</icon>
           </bundleArguments>
-          <mainClass>cn.coderoom.App</mainClass>
+          <mainClass>cn.coderoom.generator.gui.App</mainClass>
           <vendor>Owen Zou</vendor>
           <verbose>false</verbose>
           <jfxMainAppJarName>code-generator-gui.jar</jfxMainAppJarName>
